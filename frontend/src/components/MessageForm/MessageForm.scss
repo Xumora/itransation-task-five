@@ -1,0 +1,61 @@
+.messageForm{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    min-width: 700px;
+    transform: translateX(700px);
+    transition: all ease 0.5s;
+    z-index: 3;
+    &.fullScreen{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateX(100%);
+    }
+    &.isShow{
+        transform: translateX(0);
+    }
+    &.fullScreen.isShow{
+        transform: translateX(0)
+    }
+    &-theme{
+        input{
+            font-weight: bold;
+        }
+    }
+    &-text{
+        min-height: 200px !important;
+        height: calc(100% - 200px);
+        textarea{
+            resize: none;
+            &.form-control{
+                min-height: 200px !important;
+                height: 100%;
+            }
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 5px;
+            }
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+        }
+    }
+    &-bottom{
+        .sendBtn{
+            width: 99px;
+            height: 39px;
+            .spinner-border{
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+}

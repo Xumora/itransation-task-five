@@ -1,0 +1,37 @@
+.bigStroke{
+    height: 38px;
+    background: #777;
+}
+.stroke{
+    height: 15px;
+    background: #777;
+    width: 200px;
+}  
+.msgShimmer-wrapper {
+    width: 0px;
+    height: 56px;
+    animation: fullView 0.5s forwards linear;
+    &-right{
+        width: calc(100% - 250px);
+    }
+  }
+  
+@keyframes fullView {
+    100% {
+      width: 100%;
+    }
+  }
+.animate {
+    animation: shimmer 3s;
+    animation-iteration-count: infinite;
+    background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+    background-size: 1000px 100%;
+  }
+@keyframes shimmer {
+    from {
+      background-position: -1000px 0;
+    }
+    to {
+      background-position: 1000px 0;
+    }
+  }

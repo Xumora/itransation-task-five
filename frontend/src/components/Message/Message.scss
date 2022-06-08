@@ -1,0 +1,48 @@
+.message{
+    transition: all ease 0.8s;
+    max-height: 56px;
+    &.show{
+        max-height: 500px;
+    }
+    &-top{
+        &-left{
+            width: 5%;
+        }
+        &-users{
+            width: 20%;
+        }
+        &-theme{
+            width: 65%;
+            .btn{
+                text-decoration: underline !important;
+            }
+        }
+        &-right{
+            width: 10%;
+        }
+    }
+    &-dropdown{
+        max-height: 444px;
+        &-text{
+            width: 95%;
+            max-height: 444px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+            &::-webkit-scrollbar-track {
+                background: white;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 5px;
+            }
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+        }
+        &-toolbar{
+            width: 5%;
+        }
+    }
+}
